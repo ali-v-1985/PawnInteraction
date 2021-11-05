@@ -6,9 +6,9 @@
 #include "GameFramework/GameModeBase.h"
 #include "IntractableGameModeBase.generated.h"
 
-
-class APawnBase;
-
+/*
+ The base game mode to be used as the game's game mode.
+ */
 UCLASS()
 class PAWNINTERACTION_API AIntractableGameModeBase : public AGameModeBase
 {
@@ -18,5 +18,18 @@ class PAWNINTERACTION_API AIntractableGameModeBase : public AGameModeBase
 protected:
     
     virtual void BeginPlay() override;
+    
+private:
+    
+    UPROPERTY(EditAnywhere, Category="Spawning", meta=(AllowPrivateAccess="true"))
+    int32 NumberOfActors = 10;
+    
+    UPROPERTY(EditAnywhere, Category="Spawning", meta=(AllowPrivateAccess="true"))
+    float MapSize = 200;
+    
+    UPROPERTY(EditAnywhere, Category="Spawning", meta=(AllowPrivateAccess="true"))
+    TArray<TSubclassOf<AActor>> SpawnableActorTypes;
+    
+    void SpawnActors();
 	
 };

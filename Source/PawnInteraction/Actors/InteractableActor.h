@@ -6,7 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "PawnInteraction/Interfaces/Interactable.h"
 #include "InteractableActor.generated.h"
-
+/*
+ The Interactable Actor which is implementing the IInteract interface.
+ */
 UCLASS(Blueprintable, Category="MyGame")
 class PAWNINTERACTION_API AInteractableActor : public AActor, public IInteractable
 {

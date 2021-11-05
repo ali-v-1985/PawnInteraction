@@ -16,9 +16,11 @@ APawnBase::APawnBase()
      // Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     PrimaryActorTick.bCanEverTick = true;
     
+    // Setting UCapsuleComponent as the root component of the pawn.
     CapsuleComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
     RootComponent = CapsuleComponent;
     
+    // Creating 
     BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
     BaseMesh->SetupAttachment(RootComponent);
     

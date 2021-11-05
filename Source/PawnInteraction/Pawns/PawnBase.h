@@ -11,6 +11,9 @@ class UCapsuleComponent;
 class UCameraComponent;
 class USpringArmComponent;
 
+/**
+ * The base pawn of the game.
+ */
 UCLASS()
 class PAWNINTERACTION_API APawnBase : public APawn
 {

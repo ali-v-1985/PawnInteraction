@@ -8,7 +8,7 @@
 
 class AInteractableActor;
 /**
- * 
+ * Base player state to store player interactions
  */
 UCLASS()
 class PAWNINTERACTION_API ABasePlayerState : public APlayerState

@@ -7,7 +7,7 @@
 #include "Interactable.generated.h"
 
 /**
- * 
+ *  Interactable interface to be implementated by different actors in case necessary/
  */
 UINTERFACE()
 class PAWNINTERACTION_API UInteractable : public UInterface
